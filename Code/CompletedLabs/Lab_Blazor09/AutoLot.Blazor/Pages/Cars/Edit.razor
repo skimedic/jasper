@@ -49,7 +49,6 @@ else
     public override async Task SetParametersAsync(ParameterView parameters)
     {
         await base.SetParametersAsync(parameters);
-        //await Task.Delay(5000);
         Entity = await CarDataServiceInstance.GetEntityAsync(Id);
         _makes = await _makeDataService.GetAllEntitiesAsync();
         StateHasChanged();
